@@ -1,0 +1,33 @@
+@import url(style.css);
+
+a{
+    color: var(--secondary-color);
+    border-radius: 50px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.checkbox{
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+}
+.Policy{
+    margin-bottom: 35px;
+    margin-left: 10px;
+}
+input{
+    margin-bottom: 25px;
+    padding-left: 10px;
+    height: 35px;
+    background-color: var(--background-color);
+    border-color: var(--secondary-color);
+    border-radius: 20px;
+    border-width: 2px;
+    color: white;
+}
+input:focus{
+    border-color: var(--secondary-color);
+    color: white;
+}

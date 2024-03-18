@@ -1,0 +1,38 @@
+@import url(reset.css);
+@import url(form.css);
+@import url(SignUp.css);
+
+
+:root {
+    --background-color:rgb(27,29,49);
+    --background-secondary:rgb(36,37,60);
+    --primary-color: white;
+    --secondary-color: rgb(255, 81, 81);
+    --font:Arial, Helvetica, sans-serif;
+}
+
+body{
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    font-family: var(--font);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background-color: var(--background-secondary);
+}
+.main{
+    margin: 30px 20px 20px 20px
+}
+
+.Header{
+    margin: 0px 0px 30px 0px;
+    font-size: 25px;
+}
+.Footer{
+    text-align: center;
+    margin-bottom: 10px;
+}
