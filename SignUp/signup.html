@@ -23,9 +23,14 @@
                     </div>
 
                     <input type="text" placeholder="Email" id="Email">
-                    <input type="text" placeholder="Password" id="Password">
-                    <input type="text" placeholder="Confirm Password" id="Confirm Password">
-
+                    <div class="mainPassword">
+                        <input type="password" placeholder="Password" id="Password" class="password">
+                        <input type="button" class="showButton" onclick="hideUnhideMainPassword()" value="Show">
+                    </div>
+                    <div class="mainPassword">
+                        <input type="password" placeholder="Confirm Password" id="Confirm Password" class="password">
+                        <input type="button" class="showButton" onclick="hideUnhideSecondaryPassword()" value="Show">
+                    </div>
                     <div class="Policy">
                         <input type="checkbox" name="checkbox" id="checkbox" class="checkbox">
                         <label>I agree with <a href="">Privacy</a> and <a href="">Policy</a></label>
