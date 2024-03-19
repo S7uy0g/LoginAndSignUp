@@ -8,6 +8,7 @@ class Values{
         this.confirmPassword=document.getElementById("Confirm Password");
         this.privacyPolicy=document.getElementById("checkbox");
         this.warningMessage=document.getElementById("warningMessage");
+        this.emailMessage=document.getElementById("emailMessage");
     }
 }
 
@@ -21,6 +22,7 @@ function checkNull(){
     let confirmPassword=value.confirmPassword;
     let privacyPolicy=value.privacyPolicy;
     let warningMessage=value.warningMessage;
+    let emailMessage=value.emailMessage;
     let valuesToBeChecked=[firstName,lastName,email,password,confirmPassword];
     let count=0;
 
@@ -34,7 +36,10 @@ function checkNull(){
         warningMessage.style.display='block';
     }
     let emailValidate=validateEmail();
-    if(count===0 && privacyPolicy.checked && emailValidate==true){
+    if(emailValidate==false){
+        emailMessage.style.display='block';
+    }
+    if(count===0 && privacyPolicy.checked && emailValidate==true && password.value===confirmPassword.value){
         window.location.href = '../../Login/Login.html';
     }
     
