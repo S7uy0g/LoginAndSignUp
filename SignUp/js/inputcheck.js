@@ -33,9 +33,11 @@ function checkNull(){
     if(!privacyPolicy.checked){
         warningMessage.style.display='block';
     }
-    if(count===0 && privacyPolicy.checked){
+    let emailValidate=validateEmail();
+    if(count===0 && privacyPolicy.checked && emailValidate==true){
         window.location.href = '../../Login/Login.html';
     }
+    
 }
 function hideUnhideMainPassword(){
     let value=new Values();
@@ -46,4 +48,14 @@ function hideUnhideSecondaryPassword(){
     let value=new Values();
     let confirmPassword=value.confirmPassword;
     confirmPassword.type=(confirmPassword.type==="password")?"text":"password";
+}
+function validateEmail() {
+    let value=new Values();
+    var email = value.email.value;
+    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (regex.test(email)) {
+        return true;
+    } else {
+        return false;
+    }
 }
